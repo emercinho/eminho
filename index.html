@@ -43,12 +43,17 @@
 </head>
 <body>
     <div>
-        <h1>Aceita namorar comigo?</h1>
-        <div id="buttons">
-            <button class="btn btn-yes" onclick="confirm('Você disse SIM!')">Sim</button>
-            <button class="btn btn-no" id="btn-no">Não</button>
-        </div>
+    <h1>Oiii Lili, gostaria de saber se você aceita namorar comigo?</h1>
+    <div id="buttons">
+        <!-- Botão "Sim" configurado para enviar e-mail via Formspree -->
+        <form action="https://formspree.io/f/myzykrwo" method="POST">
+            <button type="submit" class="btn btn-yes">Sim</button>
+        </form>
+
+        <!-- Botão "Não" com movimento -->
+        <button class="btn btn-no" id="btn-no">Não</button>
     </div>
+</div>
 
     <script>
         // JavaScript para mover o botão "Não" aleatoriamente
