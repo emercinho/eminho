@@ -10,6 +10,7 @@
             text-align: center;
             background-color: #f2f2f2;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -39,21 +40,28 @@
             color: white;
             position: absolute;
         }
+        footer {
+            position: fixed;
+            bottom: 10px;
+            font-size: 0.8em;
+            color: #666;
+            text-align: center;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <div>
-    <h1>Oiii Lili, gostaria de saber se você aceita namorar comigo?</h1>
-    <div id="buttons">
-        <!-- Botão "Sim" configurado para enviar e-mail via Formspree -->
-        <form action="https://formspree.io/f/myzykrwo" method="POST">
-            <button type="submit" class="btn btn-yes">Sim</button>
-        </form>
-
-        <!-- Botão "Não" com movimento -->
-        <button class="btn btn-no" id="btn-no">Não</button>
+        <h1>Aceita namorar comigo?</h1>
+        <div id="buttons">
+            <button class="btn btn-yes" onclick="confirm('Você disse SIM!')">Sim</button>
+            <button class="btn btn-no" id="btn-no">Não</button>
+        </div>
     </div>
-</div>
+
+    <footer>
+        ***Entenda por sua conta e risco que essa escolha vai mudar completamente a vida da Lili, uma vez que não há possibilidade de mudança de opinião. Uma vez dito sim, a Lili concorda com os termos de tolerar o Eminho nos seus dias mais chatos, bem como deixar ele jogar sempre que possível.
+    </footer>
 
     <script>
         // JavaScript para mover o botão "Não" aleatoriamente
