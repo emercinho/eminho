@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+        #buttons {
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .btn-yes {
+            background-color: #28a745;
+            color: white;
+        }
+        .btn-no {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Aceita namorar comigo?</h1>
+        <div id="buttons">
+            <button class="btn btn-yes" onclick="confirm('Você disse SIM!')">Sim</button>
+            <button class="btn btn-no" id="btn-no">Não</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para mover o botão "Não" aleatoriamente
+        const btnNo = document.getElementById('btn-no');
+        btnNo.addEventListener('mouseover', function() {
+            const x = Math.floor(Math.random() * (window.innerWidth - btnNo.clientWidth));
+            const y = Math.floor(Math.random() * (window.innerHeight - btnNo.clientHeight));
+            btnNo.style.left = `${x}px`;
+            btnNo.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
