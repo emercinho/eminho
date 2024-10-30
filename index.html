@@ -80,14 +80,18 @@
     </footer>
 
     <script>
-        // JavaScript para mover o botão "Não" aleatoriamente
+        // JavaScript para mover o botão "Não" aleatoriamente a cada 0,5 segundo
         const btnNo = document.getElementById('btn-no');
-        btnNo.addEventListener('mouseover', function() {
+        
+        function moveButton() {
             const x = Math.floor(Math.random() * (window.innerWidth - btnNo.clientWidth));
             const y = Math.floor(Math.random() * (window.innerHeight - btnNo.clientHeight));
             btnNo.style.left = `${x}px`;
             btnNo.style.top = `${y}px`;
-        });
+        }
+
+        // Move o botão a cada 0,5 segundo
+        setInterval(moveButton, 500);
 
         // Função para mostrar a surpresa
         function showSurprise() {
